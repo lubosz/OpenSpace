@@ -22,7 +22,8 @@ local Neptune = {
     },
     Renderable = {
         Type = "RenderableGlobe",
-        Radii = { 24764000.0, 24764000.0, 24314000.0 },
+        --Radii = { 24764000.0, 24764000.0, 24314000.0 },
+        Radii = { 24764000.0, 24764000.0, 24764000.0 },
         SegmentsPerPatch = 64,
         Layers = {
             ColorLayers = {

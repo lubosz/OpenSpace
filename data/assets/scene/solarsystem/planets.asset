@@ -12,6 +12,7 @@ asset.request('./planets/mars/mars')
 asset.request('./planets/mars/atmosphere')
 
 asset.request('./planets/jupiter/jupiter')
+asset.request('./planets/jupiter/atmosphere')
 asset.request('./planets/jupiter/major_moons')
 
 asset.request('./planets/saturn/saturn')
@@ -21,4 +22,5 @@ asset.request('./planets/uranus/uranus')
 asset.request('./planets/uranus/major_moons')
 
 asset.request('./planets/neptune/neptune')
+asset.request('./planets/neptune/atmosphere')
 asset.request('./planets/neptune/major_moons')
