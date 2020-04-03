@@ -45,22 +45,8 @@ create_new_module(
 )
 
 # Set root directories for external libraries.
-set(CFITSIO_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/ext/cfitsio/")
-set(CCFITS_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/ext/CCfits/")
-set(INCLUDES_FOR_TARGET ${CCFITS_ROOT_DIR} "${CCFITS_ROOT_DIR}/../" ${CFITSIO_ROOT_DIR})
 set(MODULE_NAME openspace-module-fitsfilereader)
 
-# CCfits is dependent on cfitsio, let it handle the internal linking
-add_subdirectory(${CFITSIO_ROOT_DIR})
-set_folder_location(cfitsio "External")
 
-add_subdirectory(${CCFITS_ROOT_DIR})
-set_folder_location(CCfits "External")
-
-if (GHOUL_DISABLE_EXTERNAL_WARNINGS)
-    disable_external_warnings(cfitsio)
-    disable_external_warnings(CCfits)
-endif ()
-
-target_include_directories(${MODULE_NAME} SYSTEM PUBLIC ${INCLUDES_FOR_TARGET})
+target_include_directories(${MODULE_NAME} SYSTEM PUBLIC /usr/include/CCfits)
 target_link_libraries(${MODULE_NAME} PRIVATE CCfits)
